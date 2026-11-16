@@ -168,18 +168,24 @@ img {
   padding: 80px 20px;
 }
 .category .mainlist {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.category .mainlist .list {
+  display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 30px 20px;
+  max-width: 1200px;
+  margin: 0;
+}
+/* 개별 카테고리 */
+.category .mainlist .list {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
 }
 .category .mainlist .list img {
   display: block;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
@@ -206,7 +212,7 @@ img {
     opacity: 1;
   }
 }
-/* 모바일 */
+/* 태블릿 */
 @media (max-width: 1000px) {
   .search-box .search .search-input {
     width: 200px;
